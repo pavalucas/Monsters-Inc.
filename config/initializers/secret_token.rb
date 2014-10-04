@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-MonstersInc::Application.config.secret_key_base = '669dc560003b3905104eed5d60d11efc01e13a5401703a84c6b11d8a77fef812938ea71566162c0846df6d8dc559cb948427fd8a1c43cdcb90899cdea99ecd1e'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+MonstersInc::Application.config.secret_key_base = secure_token

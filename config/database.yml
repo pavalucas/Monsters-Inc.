@@ -18,6 +18,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: MonstersInc_development
+  host: localhost
   pool: 5
   username: MonstersInc
   password: secret
@@ -47,9 +48,10 @@ test:
   adapter: postgresql
   encoding: unicode
   database: MonstersInc_test
+  host: localhost
   pool: 5
   username: MonstersInc
-  password:
+  password: secret
 
 production:
   adapter: postgresql

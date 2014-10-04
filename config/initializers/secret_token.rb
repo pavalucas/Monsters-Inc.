@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-MonstersInc::Application.config.secret_key_base = 'ca9e17720e7953e56aafeedfbe6ec9922aba309deceafa06bce3f02ae0c27b11cd5926ac934702c76e6c5e712ef411444a5bf5140d4ed7ccdf40525a743db96b'
+MonstersInc::Application.config.secret_key_base = '6c690e0ebabb249a5a662ee20cee62428d369a5e6ee094aabc2e0e938e515c14cbfa1767cc8fe4a7de7774141c6b51ee3bd28e840fb4b3e672a1a57228be2659'

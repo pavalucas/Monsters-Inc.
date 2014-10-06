@@ -70,6 +70,6 @@ class MonstersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def monster_params
       params.require(:monster).permit(:name, :email, :password,
-                                   :password_confirmation)
+                                   :password_confirmation, :avatar)
     end
 end

@@ -6,7 +6,8 @@
 <ul class="monsters">
   <% @monsters.each do |monster| %>
     <li>
-      <h5><%= monster.name%></h5>
+    	<%= image_tag monster.avatar.url %>
+    	<h5><%= monster.name%></h5>
     </li>
   <% end %>
 

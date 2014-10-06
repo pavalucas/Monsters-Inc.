@@ -10,6 +10,7 @@ gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
+  gem 'debugger'
 end
 
 group :test do
@@ -21,6 +22,8 @@ gem 'pg'
 gem 'sass-rails', '4.0.3'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
 gem 'jquery-rails', '3.0.4'
 gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'

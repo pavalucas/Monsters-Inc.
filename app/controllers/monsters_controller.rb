@@ -4,7 +4,7 @@ class MonstersController < ApplicationController
   # GET /monsters
   # GET /monsters.json
   def index
-    @monsters = Monster.all
+    @monsters = Monster.paginate(page: params[:page])
   end
 
   # GET /monsters/1
@@ -69,6 +69,7 @@ class MonstersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def monster_params
-      params.require(:monster).permit(:name, :email)
+      params.require(:monster).permit(:name, :email, :password,
+                                   :password_confirmation)
     end
 end

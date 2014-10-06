@@ -1,29 +1,15 @@
-<h1>Listing monsters</h1>
+<% provide(:title, 'All monsters') %>
+<h1>All monsters</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<%= will_paginate %>
 
-  <tbody>
-    <% @monsters.each do |monster| %>
-      <tr>
-        <td><%= monster.name %></td>
-        <td><%= monster.email %></td>
-        <td><%= link_to 'Show', monster %></td>
-        <td><%= link_to 'Edit', edit_monster_path(monster) %></td>
-        <td><%= link_to 'Destroy', monster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<ul class="monsters">
+  <% @monsters.each do |monster| %>
+    <li>
+      <h5><%= monster.name%></h5>
+    </li>
+  <% end %>
 
-<br>
+</ul>
 
-<%= link_to 'New Monster', new_monster_path %>
+<%= will_paginate %>
